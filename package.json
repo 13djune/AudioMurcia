@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://13djune.github.io/AudioMurcia",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
