@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faEnvelope, faShop } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faEnvelope, faShop, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
@@ -10,13 +10,13 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <HashLink smooth to="/" className="text-2xl font-bold text-orange-500">
+        <Link to="/" className="text-2xl font-bold text-orange-500">
           AudioMurcia
-        </HashLink>
+        </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 items-center">
-          <Link smooth to="/productos" className="hover:text-orange-400 flex items-center gap-2">
+          <Link to="/productos" className="hover:text-orange-400 flex items-center gap-2">
             <FontAwesomeIcon icon={faShop} />
             Nuestros productos
           </Link>
@@ -38,7 +38,7 @@ function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 bg-black text-center">
-         <Link
+          <Link
             to="/productos"
             className="block text-orange-400 hover:underline"
             onClick={() => setMenuOpen(false)}
