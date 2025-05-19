@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faEnvelope, faShop, faUsers } from '@fortawesome/free-solid-svg-icons';
-import { HashLink } from 'react-router-hash-link';
+import { faBars, faTimes, faEnvelope, faShop } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -20,10 +19,10 @@ function Header() {
             <FontAwesomeIcon icon={faShop} />
             Nuestros productos
           </Link>
-          <HashLink smooth to="/#contacto" className="hover:text-orange-400 flex items-center gap-2">
+          <Link to="/#contacto" className="hover:text-orange-400 flex items-center gap-2">
             <FontAwesomeIcon icon={faEnvelope} />
             Contacto
-          </HashLink>
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -46,15 +45,14 @@ function Header() {
             <FontAwesomeIcon icon={faShop} className="mr-2" />
             Productos
           </Link>
-          <HashLink
-            smooth
+          <Link
             to="/#contacto"
             className="block text-orange-400 hover:underline"
             onClick={() => setMenuOpen(false)}
           >
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
             Contacto
-          </HashLink>
+          </Link>
         </div>
       )}
     </header>
