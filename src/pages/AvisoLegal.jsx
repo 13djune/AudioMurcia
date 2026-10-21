@@ -3,7 +3,7 @@ import React from 'react';
 const AvisoLegal = () => {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20 text-gray-800 leading-relaxed space-y-12">
-      <h1 className="text-4xl font-bold text-orange-600 text-center">Aviso Legal</h1>
+      <h1 className="text-4xl font-bold text-[#0E382C] text-center">Aviso Legal</h1>
 
       {/* SECCIÓN 1 */}
       <section className="space-y-4">
@@ -14,9 +14,9 @@ const AvisoLegal = () => {
           Responsable: <strong>GABINETE AUDIOLOGICO AUDIOMURCIA, C.B.</strong><br />
           DNI/CIF: E73976615<br />
           Dirección: AVD. REYES CATÓLICOS Nº27, 30565 - LAS TORRES DE COTILLAS (MURCIA)<br />
-          Web: <a href="https://audiomurcia.es" className="text-orange-600 hover:underline">audiomurcia.es</a><br />
-          Email: <a href="mailto:info@audiomurcia.es" className="text-orange-600 hover:underline">info@audiomurcia.es</a><br />
-          Teléfono: <a href="tel:+34968022960" className="text-orange-600 hover:underline">968 022 960</a>
+          Web: <a href="https://audiomurcia.es" className="text-[#0E382C] hover:underline">audiomurcia.es</a><br />
+          Email: <a href="mailto:info@audiomurcia.es" className="text-[#0E382C] hover:underline">info@audiomurcia.es</a><br />
+          Teléfono: <a href="tel:+34968022960" className="text-[#0E382C] hover:underline">968 022 960</a>
         </p>
       </section>
 

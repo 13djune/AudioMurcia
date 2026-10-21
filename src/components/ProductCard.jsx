@@ -2,19 +2,27 @@ import React from 'react';
 
 const ProductCard = ({ product, onView }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-      <img src={product.image} alt={product.name} className="w-full h-52 object-contain p-2" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">{product.name}</h3>
-        <p className="text-gray-500">{product.category}</p>
-        {/* <p className="text-xl font-bold mt-2 text-orange-600">{product.price}</p> */}
+    <article className="bg-white rounded-2xl border border-[#D5E7DC] shadow-sm overflow-hidden hover:shadow-md transition">
+      <div className="w-full aspect-[4/3] bg-[#F7FAF8] flex items-center justify-center p-4">
+        <img 
+          src={product.image} 
+          alt={product.name} 
+          className="w-full h-full object-contain" 
+        />
+      </div>
+      <div className="p-5">
+        <span className="text-[11px] font-bold text-[#B87319] uppercase tracking-wider">{product.category}</span>
+        <h3 className="text-base font-bold text-[#0E382C] mt-1">{product.name}</h3>
+        <p className="text-xs text-[#4A6057] mt-1.5 line-clamp-2">{product.description}</p>
         <button
+          type="button"
           onClick={() => onView(product)}
-          className="mt-4 inline-block bg-orange-500 text-white px-4 py-2 rounded ">
+          className="mt-4 w-full inline-block bg-[#0E382C] hover:bg-[#154E3E] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors text-center"
+        >
           Ver más info
         </button>
       </div>
-    </div>
+    </article>
   );
 };
 
