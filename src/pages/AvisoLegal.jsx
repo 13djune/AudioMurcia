@@ -3,11 +3,11 @@ import React from 'react';
 const AvisoLegal = () => {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20 text-gray-800 leading-relaxed space-y-12">
-      <h1 className="text-4xl font-bold text-[#431407] text-center">Aviso Legal</h1>
+      <h1 className="text-4xl font-bold text-[#0F2942] text-center">Aviso Legal</h1>
 
       {/* SECCIÓN 1 */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-[#431407]">Información general</h2>
+        <h2 className="text-2xl font-semibold text-[#0F2942]">Información general</h2>
         <p>Gracias por visitar nuestra web. Esperamos que disfrutes navegando por ella y conociendo el detalle de nuestros productos y servicios.</p>
         <p>En cumplimiento del deber de información contemplado en la normativa vigente sobre Servicios de la Sociedad de la Información y del Comercio Electrónico. Te recomendamos que leas atentamente las presentes condiciones antes de que comiences con su uso.</p>
         <p>
@@ -16,7 +16,8 @@ const AvisoLegal = () => {
           Dirección: AVD. REYES CATÓLICOS Nº27, 30565 - LAS TORRES DE COTILLAS (MURCIA)<br />
           Web: <a href="https://audiomurcia.es" className="text-[#EA580C] hover:underline">audiomurcia.es</a><br />
           Email: <a href="mailto:audiomurcia@gmail.com" className="text-[#EA580C] hover:underline">audiomurcia@gmail.com</a><br />
-          Teléfono: <a href="tel:+34968022960" className="text-[#EA580C] hover:underline">968 022 960</a>
+          Teléfono Fijo: <a href="tel:+34968022960" className="text-[#EA580C] hover:underline">968 022 960</a><br />
+          Móvil / WhatsApp: <a href="tel:+34611085841" className="text-[#EA580C] hover:underline">611 085 841</a>
         </p>
       </section>
 
