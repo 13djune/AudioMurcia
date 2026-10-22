@@ -1,4 +1,16 @@
 import React, { useState } from 'react';
+import { 
+  IconPhone, 
+  IconMobile, 
+  IconCheck, 
+  IconExploracionAudiologica, 
+  IconAudifonos, 
+  IconTapones, 
+  IconTV, 
+  IconCalendar, 
+  IconRedReal,
+  IconStar 
+} from '../components/Icons';
 
 function Home() {
   const [copiedPhone, setCopiedPhone] = useState(null);
@@ -39,7 +51,7 @@ function Home() {
                   className="cursor-pointer inline-flex items-center gap-1.5 bg-[#19303B] hover:bg-[#22404e] text-[#ADD4BB] px-3.5 py-1.5 rounded-full border border-[#ADD4BB]/50 text-xs font-black shadow-2xs transition-colors"
                   title="Visitar audiologiareal.com"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#ADD4BB]"></span>
+                  <IconRedReal className="w-3.5 h-3.5 text-[#ADD4BB] shrink-0" aria-hidden="true" />
                   <span>Red R.E.A.L. (audiologiareal.com)</span>
                   <svg viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5 text-[#ADD4BB]">
                     <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clipRule="evenodd" />
@@ -72,9 +84,7 @@ function Home() {
                     className="cursor-pointer inline-flex items-center justify-center gap-2.5 bg-[#0F2942] hover:bg-slate-900 text-white font-black text-base sm:text-lg px-7 py-4 rounded-full transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-slate-400"
                     aria-label="Llamar al teléfono fijo 968 02 29 60"
                   >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 text-amber-300" aria-hidden="true">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg>
+                    <IconPhone className="w-5 h-5 text-amber-300" aria-hidden="true" />
                     <span>Llamar al 968 02 29 60</span>
                   </a>
 
@@ -84,27 +94,24 @@ function Home() {
                     className="cursor-pointer inline-flex items-center justify-center gap-2 bg-[#065F46] hover:bg-[#044E39] text-white font-black text-base px-6 py-4 rounded-full transition-colors shadow-2xs"
                     aria-label="Llamar al móvil 611 08 58 41"
                   >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 text-white" aria-hidden="true">
-                      <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-                      <path d="M12 18h.01" />
-                    </svg>
+                    <IconMobile className="w-5 h-5 text-white" aria-hidden="true" />
                     <span>Móvil: 611 08 58 41</span>
                   </a>
                 </div>
               </div>
 
-              {/* Puntos de tranquilidad con contraste reforzado */}
+              {/* Puntos de tranquilidad con contraste reforzado y nuevo icono de check */}
               <div className="pt-2 flex flex-wrap gap-y-2 gap-x-5 text-xs sm:text-sm font-bold text-slate-900">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full bg-[#0F2942] text-white flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <IconCheck className="w-4 h-4 text-[#0F2942] shrink-0" aria-hidden="true" />
                   <span><strong>Revisión auditiva completa</strong></span>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full bg-[#C2410C] text-white flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <IconCheck className="w-4 h-4 text-[#C2410C] shrink-0" aria-hidden="true" />
                   <span><strong>30 días de prueba</strong> en tu día a día</span>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full bg-[#0F2942] text-white flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <IconCheck className="w-4 h-4 text-[#0F2942] shrink-0" aria-hidden="true" />
                   <span><strong>Ven con tu acompañante</strong></span>
                 </span>
               </div>
@@ -123,8 +130,8 @@ function Home() {
                 {/* Badge superpuesto en la foto */}
                 <div className="absolute bottom-3 left-3 right-3 bg-white/98 backdrop-blur-md p-3.5 rounded-2xl border-2 border-slate-200 shadow-md">
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#0F2942] text-amber-300 flex items-center justify-center text-sm font-bold shrink-0">
-                      ★
+                    <span className="w-8 h-8 rounded-full bg-[#0F2942] text-amber-300 flex items-center justify-center shrink-0 shadow-2xs">
+                      <IconStar className="w-4 h-4 text-amber-300" aria-hidden="true" />
                     </span>
                     <div>
                       <p className="text-xs sm:text-sm font-black text-[#0F2942] leading-tight">
@@ -142,11 +149,11 @@ function Home() {
           </div>
         </div>
 
-        {/* Cinta de confianza: Horario y enlaces con alto contraste */}
+        {/* Cinta de confianza: Horario y enlaces con iconos solicitados */}
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div className="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4 flex items-center gap-3 text-xs sm:text-sm">
-            <span className="w-9 h-9 rounded-xl bg-slate-200 text-[#0F2942] flex items-center justify-center font-black shrink-0">
-              📅
+            <span className="w-10 h-10 rounded-xl bg-slate-200 text-[#0F2942] flex items-center justify-center font-black shrink-0">
+              <IconCalendar className="w-5 h-5 text-[#0F2942]" aria-hidden="true" />
             </span>
             <div>
               <p className="font-extrabold text-[#0F2942]">Lunes a Jueves abierto</p>
@@ -158,8 +165,8 @@ function Home() {
             href="tel:+34968022960"
             className="cursor-pointer bg-slate-50 hover:bg-slate-100 border-2 border-slate-200 rounded-2xl p-4 flex items-center gap-3 text-xs sm:text-sm transition-colors group"
           >
-            <span className="w-9 h-9 rounded-xl bg-amber-100 text-[#9A3412] flex items-center justify-center font-bold shrink-0 group-hover:scale-105 transition-transform">
-              📞
+            <span className="w-10 h-10 rounded-xl bg-amber-100 text-[#9A3412] flex items-center justify-center font-bold shrink-0 group-hover:scale-105 transition-transform">
+              <IconPhone className="w-5 h-5 text-[#9A3412]" aria-hidden="true" />
             </span>
             <div>
               <p className="font-extrabold text-[#0F2942] group-hover:text-[#C2410C]">Llamada directa para cita</p>
@@ -173,8 +180,8 @@ function Home() {
             rel="noopener noreferrer"
             className="cursor-pointer bg-[#19303B] hover:bg-[#203c4a] border-2 border-[#ADD4BB]/50 rounded-2xl p-4 flex items-center gap-3 text-xs sm:text-sm transition-colors group text-[#ADD4BB]"
           >
-            <span className="w-9 h-9 rounded-xl bg-[#ADD4BB] text-[#19303B] flex items-center justify-center font-black shrink-0 group-hover:scale-105 transition-transform">
-              🌐
+            <span className="w-10 h-10 rounded-xl bg-[#ADD4BB] text-[#19303B] flex items-center justify-center font-black shrink-0 group-hover:scale-105 transition-transform">
+              <IconRedReal className="w-5 h-5 text-[#19303B]" aria-hidden="true" />
             </span>
             <div>
               <p className="font-black text-[#ADD4BB] flex items-center gap-1">
@@ -214,15 +221,13 @@ function Home() {
           <article className="bg-slate-50 rounded-3xl p-6 sm:p-7 border-2 border-slate-300 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-white border-2 border-slate-300 flex items-center justify-center text-[#C2410C] mb-5 shadow-2xs" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-6 h-6">
-                  <path d="M4 16h4l3-9 6 18 5-13 4 8h2" />
-                </svg>
+                <IconExploracionAudiologica className="w-6 h-6 text-[#C2410C]" />
               </div>
               <h3 className="text-xl font-black text-[#0F2942] mb-3">
                 Exploración audiológica
               </h3>
-              <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
-                <strong>Pruebas indoloras</strong> para conocer con exactitud cómo funciona tu oído hoy. Te entregamos <strong>resultados claros explicados en persona y con paciencia</strong>, sin prisas.
+              <p className="text-sm text-slate-800 leading-relaxed font-medium">
+                <strong>Pruebas indoloras</strong> para valorar tu audición. Resultados claros <strong>explicados con calma</strong> y sin prisas.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-slate-200 flex items-center gap-2 text-xs font-black text-[#0F2942]">
@@ -235,23 +240,22 @@ function Home() {
           <article className="bg-[#0F2942] text-white rounded-3xl p-6 sm:p-7 border-2 border-[#0F2942] flex flex-col justify-between shadow-lg lg:-translate-y-2 transition-transform">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-amber-300 mb-3 border border-slate-700" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-6 h-6">
-                  <path d="M4 16h4l3-9 6 18 5-13 4 8h2" />
-                </svg>
+                <IconAudifonos className="w-6 h-6 text-amber-300" />
               </div>
-              <span className="inline-block bg-[#C2410C] text-white text-xs font-black px-3 py-1 rounded-full mb-3 shadow-xs">
-                ★ 30 Días de Prueba
+              <span className="inline-flex items-center gap-1.5 bg-[#C2410C] text-white text-xs font-black px-3 py-1 rounded-full mb-3 shadow-xs">
+                <IconStar className="w-3.5 h-3.5 text-white shrink-0" aria-hidden="true" />
+                <span>30 Días de Prueba</span>
               </span>
               <h3 className="text-xl font-black text-white mb-3">
                 Audífonos para cada pérdida
               </h3>
-              <p className="text-sm sm:text-base text-slate-100 leading-relaxed font-medium">
-                Elegimos el <strong>audífono idóneo para ti</strong>, lo calibramos a tu medida y <strong className="text-amber-300 font-black">te lo llevas a casa durante 30 días</strong> para probarlo en tu vida real <strong>sin compromiso de compra</strong>.
+              <p className="text-sm text-slate-100 leading-relaxed font-medium">
+                Calibración personalizada y <strong className="text-amber-300 font-black">30 días de prueba en tu casa</strong> antes de decidir.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-slate-700 flex items-center gap-2 text-xs font-black text-amber-300">
               <span className="w-2 h-2 rounded-full bg-amber-300"></span>
-              <span><strong>Prueba en tu hogar</strong> antes de decidir</span>
+              <span><strong>Prueba en tu hogar</strong> sin compromiso</span>
             </div>
           </article>
 
@@ -259,15 +263,13 @@ function Home() {
           <article className="bg-slate-50 rounded-3xl p-6 sm:p-7 border-2 border-slate-300 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-white border-2 border-slate-300 flex items-center justify-center text-[#C2410C] mb-5 shadow-2xs" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-6 h-6">
-                  <path d="M4 16h4l3-9 6 18 5-13 4 8h2" />
-                </svg>
+                <IconTapones className="w-6 h-6 text-[#C2410C]" />
               </div>
               <h3 className="text-xl font-black text-[#0F2942] mb-3">
                 Tapones a medida
               </h3>
-              <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
-                <strong>Moldes anatómicos personalizados</strong> hechos con la <strong>forma exacta de tu conducto auditivo</strong>. Ideales para <strong>proteger del agua en piscina y ducha</strong> o para <strong>dormir sin ruidos</strong>.
+              <p className="text-sm text-slate-800 leading-relaxed font-medium">
+                <strong>Moldes anatómicos a medida</strong> para proteger del agua en ducha o piscina y <strong>dormir en silencio</strong>.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-slate-200 flex items-center gap-2 text-xs font-black text-[#0F2942]">
@@ -280,15 +282,13 @@ function Home() {
           <article className="bg-slate-50 rounded-3xl p-6 sm:p-7 border-2 border-slate-300 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-white border-2 border-slate-300 flex items-center justify-center text-[#C2410C] mb-5 shadow-2xs" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-6 h-6">
-                  <path d="M4 16h4l3-9 6 18 5-13 4 8h2" />
-                </svg>
+                <IconTV className="w-6 h-6 text-[#C2410C]" />
               </div>
               <h3 className="text-xl font-black text-[#0F2942] mb-3">
                 Ayudas para la TV
               </h3>
-              <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
-                <strong>Accesorios inalámbricos</strong> para recibir el audio de la tele <strong>directamente en tus audífonos</strong> con total claridad, <strong>sin tener que subir el volumen</strong> para los demás.
+              <p className="text-sm text-slate-800 leading-relaxed font-medium">
+                Audio de la televisión <strong>directo a tus audífonos</strong>, con total nitidez y sin subir el volumen a los demás.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-slate-200 flex items-center gap-2 text-xs font-black text-[#0F2942]">
@@ -423,7 +423,9 @@ function Home() {
         {/* Caja de tranquilidad (informativa, sin botón de llamada repetitivo) */}
         <div className="mt-8 bg-slate-50 p-5 sm:p-6 rounded-3xl border-2 border-slate-300 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xs">
           <div className="flex items-center gap-3.5">
-            <span className="w-10 h-10 rounded-2xl bg-[#0F2942] text-amber-300 flex items-center justify-center font-black text-base shrink-0 shadow-2xs">✓</span>
+            <span className="w-10 h-10 rounded-2xl bg-[#0F2942] text-amber-300 flex items-center justify-center shrink-0 shadow-2xs">
+              <IconCheck className="w-6 h-6 text-amber-300" />
+            </span>
             <div>
               <p className="text-sm sm:text-base font-black text-[#0F2942]">
                 Puedes venir acompañado de tus familiares
@@ -471,8 +473,9 @@ function Home() {
                   <span className="bg-slate-200 text-[#0F2942] text-xs sm:text-sm font-black px-3.5 py-1.5 rounded-full border border-slate-300">
                     El más recomendado para el día a día
                   </span>
-                  <span className="text-xs sm:text-sm font-black text-[#9A3412] flex items-center gap-1">
-                    ★ Máxima nitidez vocal
+                  <span className="text-xs sm:text-sm font-black text-[#9A3412] flex items-center gap-1.5">
+                    <IconStar className="w-4 h-4 text-[#9A3412] shrink-0" aria-hidden="true" />
+                    <span>Máxima nitidez vocal</span>
                   </span>
                 </div>
 
@@ -494,15 +497,15 @@ function Home() {
                   <div className="my-auto py-2">
                     <ul className="space-y-2.5 text-sm sm:text-base font-bold text-slate-900">
                       <li className="flex items-center gap-2.5">
-                        <span className="w-5 h-5 rounded-full bg-[#0F2942] text-amber-300 flex items-center justify-center text-xs font-black shrink-0">✓</span>
+                        <IconCheck className="w-5 h-5 text-[#0F2942] shrink-0" />
                         <span><strong>Claridad vocal inmediata:</strong> amplifica con nitidez la voz de quienes te hablan.</span>
                       </li>
                       <li className="flex items-center gap-2.5">
-                        <span className="w-5 h-5 rounded-full bg-[#0F2942] text-amber-300 flex items-center justify-center text-xs font-black shrink-0">✓</span>
+                        <IconCheck className="w-5 h-5 text-[#0F2942] shrink-0" />
                         <span><strong>Batería de todo el día:</strong> se recarga por la noche en su estuche como un teléfono móvil.</span>
                       </li>
                       <li className="flex items-center gap-2.5">
-                        <span className="w-5 h-5 rounded-full bg-[#C2410C] text-white flex items-center justify-center text-xs font-black shrink-0">✓</span>
+                        <IconCheck className="w-5 h-5 text-[#C2410C] shrink-0" />
                         <span><strong>Conexión directa Bluetooth:</strong> atiende llamadas del móvil con solo tocar tu oreja.</span>
                       </li>
                     </ul>
@@ -679,22 +682,19 @@ function Home() {
           
           {/* Tarjeta 1: Belén Chacón */}
           <article className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-slate-300 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center sm:items-start gap-6 group hover:border-[#0F2942]">
-            <div className="relative shrink-0">
+            <div className="shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1594824813626-96a92f254b73?auto=format&fit=crop&w=600&q=80"
                 alt="Retrato de Belén Chacón, audióloga y audioprotesista titular de AudioMurcia"
                 className="w-36 h-36 sm:w-44 sm:h-48 rounded-2xl object-cover border-2 border-slate-300 shadow-md group-hover:scale-[1.02] transition-transform"
               />
-              <span className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-[#0F2942] text-amber-300 text-[11px] font-black px-2.5 py-0.5 rounded-full border border-slate-700 whitespace-nowrap shadow-xs">
-                Titular
-              </span>
             </div>
 
             <div className="flex-1 text-center sm:text-left space-y-2.5">
               <div>
-                <span className="inline-block text-xs font-black text-[#C2410C] uppercase tracking-wider bg-amber-50 px-3 py-1 rounded-full border border-amber-200 mb-1">
+                <p className="text-xs font-black text-[#C2410C] uppercase tracking-wider mb-1">
                   Audióloga Titular
-                </span>
+                </p>
                 <h3 className="text-xl sm:text-2xl font-black text-[#0F2942]">
                   Belén Chacón
                 </h3>
@@ -706,36 +706,24 @@ function Home() {
               <p className="text-sm text-slate-800 leading-relaxed font-medium">
                 Más de <strong>15 años de dedicación continua</strong> cuidando la audición de familias en la Región de Murcia. Te acompaña con empatía para que cada paso sea <strong>cómodo y totalmente comprensible</strong>.
               </p>
-
-              <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-xs font-bold text-slate-900">
-                <span className="bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
-                  ✓ <strong>Atención cercana</strong>
-                </span>
-                <span className="bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
-                  ✓ <strong>Paciencia en consulta</strong>
-                </span>
-              </div>
             </div>
           </article>
 
           {/* Tarjeta 2: Francisco Gambín */}
           <article className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-slate-300 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center sm:items-start gap-6 group hover:border-[#0F2942]">
-            <div className="relative shrink-0">
+            <div className="shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80"
                 alt="Retrato de Francisco Gambín, audiólogo clínico y especialista en calibración"
                 className="w-36 h-36 sm:w-44 sm:h-48 rounded-2xl object-cover border-2 border-slate-300 shadow-md group-hover:scale-[1.02] transition-transform"
               />
-              <span className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-[#0F2942] text-amber-300 text-[11px] font-black px-2.5 py-0.5 rounded-full border border-slate-700 whitespace-nowrap shadow-xs">
-                Clínico
-              </span>
             </div>
 
             <div className="flex-1 text-center sm:text-left space-y-2.5">
               <div>
-                <span className="inline-block text-xs font-black text-[#0F2942] uppercase tracking-wider bg-slate-100 px-3 py-1 rounded-full border border-slate-300 mb-1">
+                <p className="text-xs font-black text-[#0F2942] uppercase tracking-wider mb-1">
                   Audiología Clínica
-                </span>
+                </p>
                 <h3 className="text-xl sm:text-2xl font-black text-[#0F2942]">
                   Francisco Gambín
                 </h3>
@@ -747,15 +735,6 @@ function Home() {
               <p className="text-sm text-slate-800 leading-relaxed font-medium">
                 Experto en <strong>adaptación y calibración acústica de precisión</strong>. Su objetivo es que oigas las voces con total claridad en conversaciones y televisión, <strong>evitando ruidos molestos</strong>.
               </p>
-
-              <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-xs font-bold text-slate-900">
-                <span className="bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
-                  ✓ <strong>Ajuste milimétrico</strong>
-                </span>
-                <span className="bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
-                  ✓ <strong>Sonido natural</strong>
-                </span>
-              </div>
             </div>
           </article>
 
@@ -768,9 +747,7 @@ function Home() {
             <div className="lg:col-span-8 space-y-3">
               <div className="flex flex-wrap items-center gap-3">
                 <span className="w-10 h-10 rounded-xl bg-[#ADD4BB] text-[#19303B] flex items-center justify-center font-black shadow-sm" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" className="w-5 h-5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
+                  <IconRedReal className="w-6 h-6 text-[#19303B]" />
                 </span>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-black text-[#ADD4BB]">
@@ -834,7 +811,7 @@ function Home() {
             
             {/* Recordatorio de horario SIN VIERNES */}
             <div className="mt-4 inline-flex items-center gap-2 bg-slate-900 border border-slate-700 px-4 py-2 rounded-2xl text-xs sm:text-sm text-white font-bold shadow-2xs">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <IconCalendar className="w-4 h-4 text-amber-400 shrink-0" />
               <span>Atención de <strong className="text-amber-300">Lunes a Jueves</strong> (9:30–13:30 y 16:30–19:30) • <span className="text-red-300 font-black">Viernes a Domingo cerrado</span></span>
             </div>
           </div>
@@ -847,9 +824,7 @@ function Home() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center font-black border border-amber-400/40">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-6 h-6">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg>
+                    <IconPhone className="w-6 h-6 text-amber-300" />
                   </span>
                   <span className="text-xs font-black bg-slate-800 text-amber-300 px-3 py-1 rounded-full border border-slate-600">
                     Gabinete
@@ -873,9 +848,7 @@ function Home() {
                   className="cursor-pointer w-full flex items-center justify-center gap-2.5 bg-[#C2410C] hover:bg-[#9A3412] text-white font-black text-lg py-4 px-6 rounded-2xl shadow-md transition-all text-center focus:outline-none focus:ring-4 focus:ring-amber-400"
                   aria-label="Llamar al teléfono fijo 968 02 29 60"
                 >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 text-amber-200">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
+                  <IconPhone className="w-5 h-5 text-amber-200" />
                   <span>Llamar al 968 02 29 60</span>
                 </a>
                 <button
@@ -893,10 +866,7 @@ function Home() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-black border border-emerald-500/40">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-6 h-6">
-                      <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-                      <path d="M12 18h.01" />
-                    </svg>
+                    <IconMobile className="w-6 h-6 text-emerald-300" />
                   </span>
                   <span className="text-xs font-black bg-slate-800 text-emerald-300 px-3 py-1 rounded-full border border-slate-600">
                     Móvil / WhatsApp
@@ -920,10 +890,7 @@ function Home() {
                   className="cursor-pointer w-full flex items-center justify-center gap-2.5 bg-slate-800 hover:bg-slate-700 text-white font-black text-base py-3.5 px-6 rounded-2xl border border-slate-600 transition-all text-center"
                   aria-label="Llamar al móvil 611 08 58 41"
                 >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 text-emerald-300">
-                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-                    <path d="M12 18h.01" />
-                  </svg>
+                  <IconMobile className="w-5 h-5 text-emerald-300" />
                   <span>Llamar al móvil (611 08 58 41)</span>
                 </a>
 
@@ -976,10 +943,8 @@ function Home() {
           href="tel:+34968022960"
           className="cursor-pointer flex-1 flex items-center justify-center gap-2 bg-[#0F2942] text-white font-black text-sm py-3.5 rounded-2xl shadow"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-amber-300">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-          Llamar: 968 02 29 60
+          <IconPhone className="w-4 h-4 text-amber-300" />
+          <span>Llamar: 968 02 29 60</span>
         </a>
         <a
           href="https://wa.me/34611085841"
@@ -987,7 +952,8 @@ function Home() {
           rel="noopener noreferrer"
           className="cursor-pointer flex-1 flex items-center justify-center gap-2 bg-[#065F46] hover:bg-[#044E39] text-white font-black text-sm py-3.5 rounded-2xl shadow"
         >
-          WhatsApp: 611 08 58 41
+          <IconMobile className="w-4 h-4 text-white" />
+          <span>WhatsApp: 611 08 58 41</span>
         </a>
       </aside>
 
