@@ -10,18 +10,18 @@ const ProductModal = ({ product, onClose }) => {
       aria-modal="true"
       aria-labelledby="modal-product-title"
     >
-      <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-[#D5E7DC] overflow-hidden relative">
+      <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border-2 border-slate-300 overflow-hidden relative">
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 text-[#4A6057] hover:text-[#0E382C] text-2xl p-2 rounded-full hover:bg-[#EDF5F0] transition-colors focus:outline-none"
+          className="absolute top-4 right-4 text-slate-900 hover:text-black text-2xl font-black p-2 rounded-full hover:bg-slate-100 transition-colors focus:outline-none cursor-pointer"
           aria-label="Cerrar detalle de producto"
         >
           &times;
         </button>
 
         <div className="md:flex p-6 sm:p-8 space-y-6 md:space-y-0 md:space-x-8 items-center">
-          <div className="w-full md:w-1/2 aspect-square bg-[#F7FAF8] rounded-2xl p-4 flex items-center justify-center border border-[#D5E7DC]">
+          <div className="w-full md:w-1/2 aspect-square bg-slate-50 rounded-2xl p-4 flex items-center justify-center border-2 border-slate-200">
             <img 
               src={product.image} 
               alt={product.name} 
@@ -30,16 +30,16 @@ const ProductModal = ({ product, onClose }) => {
           </div>
 
           <div className="flex-1 space-y-3">
-            <span className="text-xs font-bold text-[#B87319] uppercase tracking-wider">{product.category}</span>
-            <h2 id="modal-product-title" className="text-2xl font-bold text-[#0E382C]">{product.name}</h2>
-            <p className="text-sm text-[#405850] leading-relaxed">{product.description}</p>
+            <span className="text-xs font-black text-[#C2410C] uppercase tracking-wider">{product.category}</span>
+            <h2 id="modal-product-title" className="text-2xl font-black text-[#0F2942]">{product.name}</h2>
+            <p className="text-base text-slate-800 leading-relaxed font-medium">{product.description}</p>
             <div className="pt-4">
               <a
-                href="/#contacto"
+                href="tel:+34968022960"
                 onClick={onClose}
-                className="inline-block bg-[#0E382C] hover:bg-[#154E3E] text-white text-xs font-bold px-5 py-2.5 rounded-full transition-colors"
+                className="cursor-pointer inline-flex items-center gap-2 bg-[#0F2942] hover:bg-slate-900 text-white text-sm font-black px-6 py-3.5 rounded-full transition-colors shadow-xs"
               >
-                Consultar disponibilidad en centro
+                <span>Llamar al 968 02 29 60 para consultar</span>
               </a>
             </div>
           </div>

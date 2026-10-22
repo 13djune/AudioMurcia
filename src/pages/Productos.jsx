@@ -57,15 +57,15 @@ function Productos() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <div className="bg-[#FAFDFB] min-h-screen">
+    <div className="bg-slate-50 min-h-screen">
       <section className="py-16 sm:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold text-[#B87319] uppercase tracking-wider">Catálogo especializado</span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0E382C] mt-1 mb-4">
+            <span className="text-xs sm:text-sm font-black text-[#C2410C] uppercase tracking-wider">Catálogo especializado</span>
+            <h1 className="text-3xl sm:text-4xl font-black text-[#0F2942] mt-1 mb-4">
               Nuestros productos y accesorios
             </h1>
-            <p className="text-sm text-[#405850] leading-relaxed">
+            <p className="text-base text-slate-800 leading-relaxed font-medium">
               Disponemos de una cuidada selección de audífonos Phonak, tapones de protección a medida y consumibles originales en nuestro gabinete de Las Torres de Cotillas.
             </p>
           </div>

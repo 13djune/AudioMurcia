@@ -40,3 +40,13 @@ input[type="radio"],
 .cursor-pointer {
   cursor: pointer;
 }
+
+/* High contrast visible focus indicators for WCAG AAA accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #0F2942;
+  outline-offset: 3px;
+}
+
